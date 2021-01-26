@@ -1,2 +1,124 @@
+<html>
+
+  <style>
+
+body {
+  background-image: url(https://images.pexels.com/photos/4173624/pexels-photo-4173624.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  /* background-repeat:no-repeat; */
+background-size:contain;
+
+/* background-position:center; */
 
 
+    }
+tr, td {
+  visibility: 'hidden';
+  font-size: 45px;
+  border: 1px solid black;
+  padding: 5%;
+  width : 110px;
+  height: 110px;
+  text-align: center;
+
+  background-color:rgba(16, 176, 224, 0.5);
+
+}
+  .myButton {
+	box-shadow:inset 0px -3px 7px 0px #29bbff;
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Garamond;
+	font-size:15px;
+	/* padding:9px 23px; */
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+  text-align: center;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+#playerTurn {
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 5%;
+  font-size: 30px;
+  color:rgba(196, 25, 181)
+}
+#tic-tac-toe {
+  background-color:rgba(16, 176, 224, 0.5);
+  visibility: hidden;
+  margin: 25px 50px 75px 100px;
+  border: 1px solid black;
+  padding: 5%;
+}
+#restart {
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 5%;
+}
+#login {
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 5%;
+  text-align: center;
+  background-color:rgba(16, 176, 224, 0.5);
+}
+#playbutton {
+  font-size: 20px;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-left: 595px;
+  /* position: fixed; */
+  display:block;
+
+}
+
+</style>
+
+<body >
+
+  <form  id="login" align = 'center'>
+    <h2>Enter your name if you would like or just hit play</h2>
+    <h3> player1 </h3>
+    <input id = 'player1Name' type="text" placeholder="player 1 name">
+    <h3> player2 </h3>
+    <input id = 'player2Name' type="text" placeholder="player 2 name">
+    <button id = 'playbutton' type= "submit" class="formSubmit"  align = 'center' >play</button>
+  </form>
+
+  <div id = 'tic-tac-toe' align = "center" >
+    <div id = 'playerTurn'> it is Player x's turn </div>
+    <table >
+      <tbody>
+        <tr>
+          <td class = 'row1' id = 'R1C1' onClick ='getData(this)'></td>
+          <td class = 'row1' id = 'R1C2' onClick ='getData(this)'></td>
+          <td class = 'row1' id = 'R1C3' onClick ='getData(this)'></td>
+        </tr>
+        <tr>
+          <td class = 'row2' id = 'R2C1' onClick ='getData(this)'></td>
+          <td class = 'row2' id = 'R2C2' onClick ='getData(this)'></td>
+          <td class = 'row2' id = 'R2C3' onClick ='getData(this)'></td>
+        </tr>
+        <tr>
+          <td class = 'row2' id = 'R3C1' onClick ='getData(this)'></td>
+          <td class = 'row2' id = 'R3C2' onClick ='getData(this)'></td>
+          <td class = 'row2' id = 'R3C3' onClick ='getData(this)'></td>
+        </tr>
+      </tbody>
+    </table>
+    <div id = 'restart' class = 'myButton' onClick = 'clearBoard()'> Restart? </div>
+  </div>
+</body>
+<script type="text/javascript" src="./app.js"></script>
+</html>
