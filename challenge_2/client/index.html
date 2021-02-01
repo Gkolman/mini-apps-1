@@ -1,2 +1,39 @@
+<html lang="en" dir="ltr">
+
+<head>
+
+</head>
+
+<style>
+
+#afterData{
+    /* position: absolute; */
+    position: relative;
+    align-content: center;
+}
+#button{
+    vertical-align: center;
+}
+
+</style>
+
+<body>
+    <h1 id = 'working' >Post JSON below</h1>
+    <form action="/upload_json" name="jsonText" method="post">
+        <textarea id="jsonData" class="text" cols="86" rows ="20" name="jsonData"></textarea>
+        <input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+       <input id = 'button' type="submit" value="translate" class="submitButton">
+    </form>
+
+    <div id = 'afterData'>
+        <h1> after data </h1>
+        <p id = 'parsedData'> will parse here </p>
+    </div>
+</body>
+
+<script type="text/javascript" src ='./app.js'></script>
 
 
+</html>
