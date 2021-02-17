@@ -6,6 +6,11 @@ var Payment = props => {
     "div",
     null,
     React.createElement(
+      "h2",
+      null,
+      " add a credit card to your account below "
+    ),
+    React.createElement(
       "form",
       { onSubmit: props.submit },
       React.createElement(

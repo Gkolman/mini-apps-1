@@ -6,6 +6,11 @@ var CreateAccount = props => {
     "div",
     null,
     React.createElement(
+      "h2",
+      null,
+      " create an account below "
+    ),
+    React.createElement(
       "form",
       { onSubmit: props.submit },
       React.createElement(

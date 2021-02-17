@@ -4,7 +4,9 @@ var AdressForm = (props) =>  {
   // }
   //
   // render(){
-    return (     <div>
+    return (
+       <div>
+         <h2> enter in your mailing address below </h2>
           <form onSubmit={props.submit}>
             <h3> street </h3>
             <input type = "text" onChange = {props.street}/>

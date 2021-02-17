@@ -4,6 +4,7 @@
 import CreateAccount from './components/CreateAccount.js';
 import AddressForm from './components/AddressForm.js';
 import PaymentForm from './components/PaymentForm.js';
+import FinalData from './components/Final.js';
 // import $ from '../../node_modules/jquery'
 // import $ from '/js/libs/jquery/dist/jquery.js'
 
@@ -27,7 +28,11 @@ class App extends React.Component {
       ccNumber: '',
       expr: '',
       cvv: '',
-      billing: ''
+      billing: '',
+
+      accountCreated: false,
+      addressCreated: false,
+      paymentCreated: false
     };
   }
 
@@ -50,8 +55,14 @@ class App extends React.Component {
       url: '/account',
       type: 'POST',
       data: { data: this.state },
-      success: () => {
-        console.log('successful ajax post');
+      success: data => {
+        if (data) {
+          this.setState({ accountCreated: true });
+          console.log('logged in');
+        } else {
+          // this.setState({ accountCreated: true})
+          console.log('username is taken!');
+        }
       },
       error: err => {
         console.log('ajax err -> ', err);
@@ -91,7 +102,7 @@ class App extends React.Component {
       type: 'POST',
       data: { data: this.state },
       success: () => {
-        console.log('successful ajax post');
+        this.setState({ addressCreated: true });
       },
       error: err => {
         console.log('ajax err -> ', err);
@@ -124,24 +135,45 @@ class App extends React.Component {
       type: 'POST',
       data: { data: this.state },
       success: () => {
-        console.log('successful ajax post');
+        this.setState({ paymentCreated: true });
       },
       error: err => {
         console.log('ajax err -> ', err);
       }
     });
   }
+  finalSubmit(e) {
+    e.preventDefault();
+    this.setState({
+      username: '',
+      password: '',
+      email: '',
+      street: '',
+      suite: '',
+      city: '',
+      state: '',
+      zip: '',
+      phone: '',
+      ccNumber: '',
+      expr: '',
+      cvv: '',
+      billing: '',
+      accountCreated: false,
+      addressCreated: false,
+      paymentCreated: false
+    });
+  }
   render() {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement(CreateAccount, {
+    console.log('this state -> ', this.state);
+    if (!this.state.accountCreated) {
+      return React.createElement(CreateAccount, {
         username: this.usernameText.bind(this),
         email: this.emailText.bind(this),
         password: this.passwordText.bind(this),
         submit: this.submitCreateAccount.bind(this)
-      }),
-      React.createElement(AddressForm, {
+      });
+    } else if (!this.state.addressCreated) {
+      return React.createElement(AddressForm, {
         street: this.streetText.bind(this),
         suite: this.suiteText.bind(this),
         state: this.stateText.bind(this),
@@ -149,20 +181,23 @@ class App extends React.Component {
         zip: this.zipText.bind(this),
         phone: this.phoneText.bind(this),
         submit: this.submitAddressForm.bind(this)
-      }),
-      React.createElement(PaymentForm, {
+      });
+    } else if (!this.state.paymentCreated) {
+      return React.createElement(PaymentForm, {
         cc: this.ccNumberText.bind(this),
         expr: this.exprText.bind(this),
         cvv: this.cvvText.bind(this),
         billing: this.billingText.bind(this),
         submit: this.submitPaymentForm.bind(this)
-      }),
-      React.createElement(
-        'h1',
-        null,
-        'client is running'
-      )
-    );
+      });
+    } else {
+      console.log('entering');
+    }
+    console.log('entering');
+    return React.createElement(FinalData, {
+      data: this.state,
+      submit: this.finalSubmit.bind(this)
+    });
   }
 };
 

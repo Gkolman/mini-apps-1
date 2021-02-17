@@ -4,6 +4,7 @@
 
     return (
     <div>
+      <h2> add a credit card to your account below </h2>
       <form onSubmit={props.submit}>
         <h3> credit card number</h3>
         <input type = "text" onChange = {props.cc}/>
