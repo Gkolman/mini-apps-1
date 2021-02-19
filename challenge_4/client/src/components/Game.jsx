@@ -3,6 +3,7 @@ import React from 'react';
 var Game = (props) => {
 //
   console.log('props in game ->', props)
+
   return (
     <table className ="table">
       <thead>
