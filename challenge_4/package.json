@@ -4,9 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
     "react-dev": "webpack --mode=development --watch"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "author": "Gage Guzman",
   "license": "ISC",
@@ -15,11 +19,17 @@
     "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
+    "jsdom": "^16.4.0",
+    "mocha": "^8.3.0",
+    "react-addons-test-utils": "^15.6.2",
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
+    "chai": "^4.3.0",
     "express": "^4.17.1",
     "html-webpack-plugin": "^5.1.0",
+    "jquery": "^3.6.0",
+    "nodemon": "^2.0.11",
     "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

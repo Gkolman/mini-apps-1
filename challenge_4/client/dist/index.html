@@ -4,27 +4,53 @@
   </head>
   <style>
 
- .table{
-    font-size: 40px;
+.table, .tr, .td{
+    font-size: 60px;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: red;
     outline: 2px solid blue;
-  }
-  .tr{
-    font-size: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    outline: 2px solid blue;
-  }
-  .td{
-    font-size: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    outline: 2px solid blue;
-  }
-  </style>
-  <body>
+}
+.winningHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  color: yellow;
+  font-size: 30px;
+}
+.myButton {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	/* display:inline-block; */
+	cursor:pointer;
+  left:43.5%;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  overflow: hidden;
+  position: absolute;
 
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+  </style>
+  <body id="body"  style="background-image: url(https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg)">
     <div id = "root">
       working
     </div>
