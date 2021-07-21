@@ -13,8 +13,6 @@ app.use(express.static('client'))
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
 
-
-
 app.listen(port, () => {
   console.log(`app is running on http://localhost:${port}`)
 })
@@ -32,25 +30,24 @@ app.get("/upload_json", (req, res) => {
 app.post("/uploadText", (req, res) => {
   var parsed = parseData(req.body.jsonData)
   if (parsed) {
-    formTemplate += `${tablefyData(parsed)}</div>`
-    res.send(formTemplate)
+    var parsedData =  formTemplate + `${tablefyData(parsed)}</div>`
+    res.send(parsedData)
   } else {
-    formTemplate += ' no JSON data</div>'
-    res.send(formTemplate)
+    var parsedData =  formTemplate + 'no JSON data</div>'
+    res.send(parsedData)
   }
 });
 
 app.post('/uploadFile', upload.single('avatar'), function (req, res, next) {
-  console.log('req.file -> ', req.file)
   fs.readFile(req.file.path, 'utf8' , (err, data) => {
     if (err) {console.error(err);return}
     var parsed = parseData(data)
     if (parsed) {
-      formTemplate += `${tablefyData(parsed)}</div>`
-      res.send(formTemplate)
+      var parsedData = formTemplate + `${tablefyData(parsed)}</div>`
+      res.send(parsedData)
     } else {
-      formTemplate += ' no JSON data</div>'
-      res.send(formTemplate)
+      var parsedData = formTemplate + 'no JSON data</div>'
+      res.send(parsedData)
     }
   });
   // req.file is the `avatar` file
