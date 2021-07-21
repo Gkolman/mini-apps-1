@@ -27,6 +27,7 @@ var tablefyData = (data) => {
     template += `</tr>`
   }
   template += `</tbody> </table>`
+  console.log('template -> ', template)
   return template
 }
 

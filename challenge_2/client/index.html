@@ -19,12 +19,13 @@
 
 <body>
     <h1 id = 'working' >Post JSON below</h1>
-    <form action="/upload_json" name="jsonText" method="post">
+    <form action="/uploadText" method="post">
         <textarea id="jsonData" class="text" cols="86" rows ="20" name="jsonData"></textarea>
-        <input type="file"
-       id="avatar" name="avatar"
-       accept="image/png, image/jpeg">
-       <input id = 'button' type="submit" value="translate" class="submitButton">
+        <input id='button'type="submit" value="translate" class="submitButton">
+    </form>
+    <form action="/uploadFile" method="post"  enctype="multipart/form-data" >
+        <input type="file"id="avatar" value="choose file" name="avatar"accept=".csv, .json">
+        <input id='button'type="submit" value="submit file" class="submitButton">
     </form>
 
     <div id = 'afterData'>
