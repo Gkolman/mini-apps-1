@@ -63,7 +63,7 @@
 ### Tools used:
     HTML & CSS, Express, MongoDb, Mongoose, Jquery
 
-  ![](/images/JSONparser.gif)
+  ![](/images/form-recap.gif)
 
 ### How to start?:
 ####  simply clone the mini-apps project copy and pasting this into your terminal and hitting enter
