@@ -10,7 +10,7 @@
 ### tools used
 #### HTML & CSS
 
-  ![](../images/tic-tac-toe.gif)
+  ![](/images/tic-tac-toe.gif)
 
 ### How to start?:
 ####  simply clone the mini-apps project via running `git clone https://github.com/Gkolman/mini-apps-1.git` in your terminal
