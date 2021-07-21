@@ -1,0 +1,14 @@
+{
+  "name": "challenge_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "open ./index.html"
+  },
+  "author": "Gage Guzman",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
