@@ -1,20 +1,27 @@
 # mini-apps-1
-This is a project I completed as a student at [hackreactor](http://hackreactor.com)
 
-Challenge1:
+### This is a project I completed as a student at [hackreactor](http://hackreactor.com)
 
-  Descirption: 
-      simple version of the classic tic-tac-toe written in plain html and css with no depencies 
-      
-      <img width="1437" alt="Screen Shot 2021-07-21 at 9 53 58 AM" src="https://user-images.githubusercontent.com/54620463/126528604-03b4b53e-6321-4782-a0d8-45061f7662d9.png">
+## Challenge1:
 
-      
-  How to start?: 
-      simply run git clone 
+### Descirption:
+#### simple version of the classic tic-tac-toe written in plain html and css with no depencies
 
-challenge2:
+### tools used
+#### HTML & CSS
 
-challenge3:
+  ![](../images/tic-tac-toe.gif)
 
-challenge4: 
+### How to start?:
+####  simply clone the mini-apps project via running `git clone https://github.com/Gkolman/mini-apps-1.git` in your terminal
+#### the cd into the folder via `cd `
+
+ ### Improvements I would make;
+ #### keeping score, style with React and/or nextJs
+
+## challenge2:
+
+## challenge3:
+
+## challenge4:
 
