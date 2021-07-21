@@ -90,7 +90,7 @@
 ### Tools used:
     React, CSS, Webpack, Babel, Express
 
-  ![](/images/connsectFour.gif)
+  ![](/images/connectFour.gif)
 
 ### How to start?:
 ####  simply clone the mini-apps project copy and pasting this into your terminal and hitting enter
