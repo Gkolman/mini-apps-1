@@ -1,14 +1,14 @@
 # mini-apps-1
 
-### This is a project I completed as a student at [hackreactor](http://hackreactor.com)
+##### This is a project I completed as a student at [hackreactor](http://hackreactor.com)
 
 ## Challenge1:
 
-### Descirption:
-#### simple version of the classic tic-tac-toe written in plain html and css with no depencies
+### Description:
+    ##### simple version of the classic tic-tac-toe written in plain html and css with no depencies
 
-### tools used
-#### HTML & CSS
+### Tools used:
+    ##### HTML & CSS
 
   ![](/images/tic-tac-toe.gif)
 
