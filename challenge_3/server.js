@@ -75,5 +75,5 @@ app.post('/payment', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`server is running on ${port}`)
+  console.log(`app is running on http://localhost:${port}/`)
 })
